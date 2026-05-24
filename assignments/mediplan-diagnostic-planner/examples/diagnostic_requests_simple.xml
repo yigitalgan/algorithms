@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<requests>
+    <single_target ref="cardiovascular_risk"/>
+    <all_targets>
+        <target ref="cardiovascular_risk"/>
+    </all_targets>
+</requests>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue>
+    <test id="total_cholesterol" name="Total Cholesterol" type="RAW" sample_type="BLOOD" collection_cost="3"/>
+    <test id="hdl_cholesterol" name="HDL Cholesterol" type="RAW" sample_type="BLOOD" collection_cost="3"/>
+    <test id="bmi" name="Body Mass Index" type="RAW" sample_type="NONE" collection_cost="1"/>
+
+    <test id="cholesterol_ratio" name="Cholesterol Ratio" type="DERIVED">
+        <input ref="total_cholesterol"/>
+        <input ref="hdl_cholesterol"/>
+    </test>
+
+    <test id="bmi_indicator" name="BMI Indicator" type="DERIVED">
+        <input ref="bmi"/>
+    </test>
+
+    <test id="cardiovascular_risk" name="Cardiovascular Risk Score" type="COMPOSITE">
+        <input ref="cholesterol_ratio"/>
+        <input ref="bmi_indicator"/>
+    </test>
+</catalogue>

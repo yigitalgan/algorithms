@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <districts>
+    <district>
+      <id>D0</id>
+      <name>Power Plant</name>
+      <links>
+        <link><target>D1</target><cableCost>4</cableCost></link>
+        <link><target>D2</target><cableCost>3</cableCost></link>
+      </links>
+    </district>
+    <district>
+      <id>D1</id>
+      <name>Electricity Hub</name>
+      <links>
+        <link><target>D3</target><cableCost>7</cableCost></link>
+      </links>
+    </district>
+    <district>
+      <id>D2</id>
+      <name>Solar Farm</name>
+      <links>
+        <link><target>D3</target><cableCost>5</cableCost></link>
+      </links>
+    </district>
+    <district>
+      <id>D3</id>
+      <name>Data Center</name>
+      <links/>
+    </district>
+  </districts>
+
+  <bootDependencies>
+    <s>
+      <id>S0</id>
+      <name>Power Plant</name>
+      <requires/>
+    </s>
+    <s>
+      <id>S1</id>
+      <name>Electricity Hub</name>
+      <requires><req>S0</req></requires>
+    </s>
+    <s>
+      <id>S2</id>
+      <name>Data Center</name>
+      <requires><req>S1</req></requires>
+    </s>
+    <s>
+      <id>S3</id>
+      <name>Security HQ</name>
+      <requires><req>S2</req></requires>
+    </s>
+  </bootDependencies>
+
+  <fiberLinks>
+    <station>
+      <id>F0</id>
+      <name>Network Core</name>
+      <outgoing>
+        <link><target>F1</target></link>
+        <link><target>F2</target></link>
+      </outgoing>
+    </station>
+    <station>
+      <id>F1</id>
+      <name>Sensor Array</name>
+      <outgoing><link><target>F2</target></link></outgoing>
+    </station>
+    <station>
+      <id>F2</id>
+      <name>Security HQ</name>
+      <outgoing><link><target>F1</target></link><link><target>F3</target></link></outgoing>
+    </station>
+    <station>
+      <id>F3</id>
+      <name>Traffic AI</name>
+      <outgoing/>
+    </station>
+  </fiberLinks>
+
+  <leakScenarios>
+    <scenario>
+      <sourceId>F0</sourceId>
+    </scenario>
+  </leakScenarios>
+</data>

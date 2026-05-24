@@ -1,0 +1,1 @@
+| 03 | [Aetheria Smart City Graph Algorithms](assignments/aetheria-smart-city-graph-algorithms) | Java 11 | Graph traversal, connectivity, MST, topological sorting, cycle detection, SCCs, BFS layers |

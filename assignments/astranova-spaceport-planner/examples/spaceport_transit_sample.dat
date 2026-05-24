@@ -1,0 +1,10 @@
+num_shuttle_corridors = 2
+origin_point = (0, 0)
+destination_point = (12000, 1500)
+average_shuttle_speed = 500.00
+
+corridor_name = "Orbital Link"
+corridor_stations = (0, 300) (4000, 300) (7000, 300)
+
+corridor_name = "Command Axis"
+corridor_stations = (2500, 1000) (7000, 1000) (12000, 1000)

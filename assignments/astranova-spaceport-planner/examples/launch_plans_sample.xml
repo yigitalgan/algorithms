@@ -1,0 +1,13 @@
+<LaunchPlans>
+<LaunchPlan>
+<PlanName>Orbiter Alpha</PlanName>
+<Operations>
+<Operation><Code>0</Code><Label>Activate ground support units</Label><ExecutionTime>2</ExecutionTime><BlockedBy></BlockedBy></Operation>
+<Operation><Code>1</Code><Label>Validate telemetry link</Label><ExecutionTime>1</ExecutionTime><BlockedBy><RequiresOperation>0</RequiresOperation></BlockedBy></Operation>
+<Operation><Code>2</Code><Label>Fuel core stage</Label><ExecutionTime>3</ExecutionTime><BlockedBy><RequiresOperation>0</RequiresOperation></BlockedBy></Operation>
+<Operation><Code>3</Code><Label>Attach payload module</Label><ExecutionTime>2</ExecutionTime><BlockedBy><RequiresOperation>2</RequiresOperation></BlockedBy></Operation>
+<Operation><Code>4</Code><Label>Run integrated systems check</Label><ExecutionTime>1</ExecutionTime><BlockedBy><RequiresOperation>1</RequiresOperation><RequiresOperation>3</RequiresOperation></BlockedBy></Operation>
+<Operation><Code>5</Code><Label>Issue launch authorization</Label><ExecutionTime>1</ExecutionTime><BlockedBy><RequiresOperation>4</RequiresOperation></BlockedBy></Operation>
+</Operations>
+</LaunchPlan>
+</LaunchPlans>
